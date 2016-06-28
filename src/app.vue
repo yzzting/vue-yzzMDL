@@ -83,6 +83,6 @@ export default {
         padding: inherit;
     }
     .yzz-collapsible-body li {
-        padding: 1.5em 1em;
+        padding: 1.5em 2em
     }
 </style>

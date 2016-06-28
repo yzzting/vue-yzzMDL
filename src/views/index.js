@@ -8,6 +8,7 @@ import Forms from './Forms.vue';
 import Navbar from './Navbar.vue';
 import Preloader from './Preloader.vue';
 import Start from './Start.vue';
+import Install from './Install.vue';
 export default {
     About,
     Buttons,
@@ -19,4 +20,5 @@ export default {
     Navbar,
     Preloader,
     Start,
+    Install
 }
