@@ -4,7 +4,7 @@
             <a v-link="{path:'/install'}" class="header-button">Install</a>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" id="container">
         <h2>安装</h2>
         <p>
             通过npm安装
@@ -19,7 +19,7 @@
     </div>
 </template>
 
-<script>
+<script type="text/javascript">
 
 </script>
 

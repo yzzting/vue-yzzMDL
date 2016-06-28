@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
 import Views from './views/index.js';
+import markdown from './doc/mark.js';
 Vue.use(VueRouter);
 var router = new VueRouter();
 router.map({
@@ -44,3 +45,5 @@ router.redirect({
   '*': '/about'
 })
 router.start(App, '#app');
+
+markdown.markdown();

@@ -1,6 +1,7 @@
 var vue = require('vue-loader')
 var webpack = require('webpack')
-
+var marked = require("marked");
+var renderer = new marked.Renderer();
 module.exports = {
     entry: './src/entry',
     output: {
@@ -12,8 +13,6 @@ module.exports = {
         loaders: [{
             test: /\.vue$/,
             loader: vue.withLoaders({
-                // apply babel transform to all javascript
-                // inside *.vue files.
                 js: 'babel?optional[]=runtime'
             })
         }, {
@@ -23,7 +22,10 @@ module.exports = {
         }, {
             test: "\.(png|jpg)$",
             loader: "url-loader?limit=8192"
-        }]
+        }, {
+            test: /\.md$/,
+            loader: "html!markdown"
+        }, ]
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -43,5 +45,8 @@ module.exports = {
         hot: false,
         inline: true,
         grogress: true,
+    },
+    markdownLoader: {
+        renderer: renderer
     }
 }
