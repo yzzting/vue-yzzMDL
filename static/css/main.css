@@ -16,11 +16,13 @@ a {
     left: 0;
 }
 
+
 /*nav style*/
 
 header {
     position: fixed;
     width: 100%;
+    z-index: 999;
 }
 .nav-header {
     background-color: #D50000;
@@ -35,14 +37,18 @@ header {
 }
 .container {
     padding: 5em;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
 }
 
-/*code style*/
+/*markdown style*/
 
-.code-body {
+
+code {
+    padding: 1.5em;
     display: block;
     overflow-x: auto;
-    padding: 0;
     background: #0C2238;
     color: white;
     font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
@@ -50,16 +56,32 @@ header {
     tab-size: 2;
     -webkit-font-smoothing: auto;
     -webkit-text-size-adjust: none;
-    position: relative;
     border-radius: 2px;
     margin: 0 0 1em;
 }
-.code-body:before {
-    content: attr(lang);
+
+code::before {
+    content:attr(class);
     display: block;
     background: #D50000;
     color: white;
     line-height: 48px;
     padding: 0 16px;
     border-radius: 2px 2px 0 0;
+    height: 2.5em;
+}
+
+
+
+/*media*/
+
+@media only screen and (min-width: 600px) {
+    .containe {
+        width: 85%
+    }
+}
+@media only screen and (min-width: 990px) {
+    .container {
+        width: 70%;
+    }
 }

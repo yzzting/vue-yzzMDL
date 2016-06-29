@@ -5,21 +5,11 @@
         </nav>
     </header>
     <div class="container" id="container">
-        <h2>安装</h2>
-        <p>
-            通过npm安装
-        </p>
-        <div class="code-body" lang="shell">
-            <pre>
-                <code>
-                    npm install --save yzzmdl
-                </code>
-            </pre>
-        </div>
+
     </div>
 </template>
 
-<script type="text/javascript">
+<script>
 
 </script>
 

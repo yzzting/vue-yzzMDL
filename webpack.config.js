@@ -24,7 +24,7 @@ module.exports = {
             loader: "url-loader?limit=8192"
         }, {
             test: /\.md$/,
-            loader: "html!markdown"
+            loader: "html!markdown-highlight"
         }, ]
     },
     plugins: [
@@ -42,11 +42,11 @@ module.exports = {
     devtool: "source-map",
     devServer: {
         historyApiFallback: true,
-        hot: false,
+        hot: true,
         inline: true,
         grogress: true,
     },
     markdownLoader: {
         renderer: renderer
-    }
+    },
 }
