@@ -1,7 +1,6 @@
 var vue = require('vue-loader')
 var webpack = require('webpack')
-var marked = require("marked");
-var renderer = new marked.Renderer();
+
 module.exports = {
     entry: './src/entry',
     output: {
@@ -22,10 +21,7 @@ module.exports = {
         }, {
             test: "\.(png|jpg)$",
             loader: "url-loader?limit=8192"
-        }, {
-            test: /\.md$/,
-            loader: "html!markdown-highlight"
-        }, ]
+        }]
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -45,8 +41,5 @@ module.exports = {
         hot: true,
         inline: true,
         grogress: true,
-    },
-    markdownLoader: {
-        renderer: renderer
-    },
+    }
 }
