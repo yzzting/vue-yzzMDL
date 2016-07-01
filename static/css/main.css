@@ -3,9 +3,10 @@ li {
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 #sidenav {
+    background-color: #cf0202;
     width: 240px;
     height: 100%;
     padding: 0;
@@ -104,6 +105,10 @@ header {
     -webkit-text-size-adjust: none;
     border-radius: 2px;
     margin: 0 0 1em;
+}
+
+pre{
+    padding: 1em;
 }
 
 /*content style*/

@@ -7,7 +7,7 @@
     <div class="container" id="container">
         <com-title>安装</com-title>
         <div class="doc-list">
-            <com-content>通过npm进行安装</com-content>
+            <com-content>通过npm进行安装,npm可以更好的和webpack这类的打包工具配合使用</com-content>
             <com-code lang="javascript">{{install.install}}</com-code>
         </div>
     </div>
